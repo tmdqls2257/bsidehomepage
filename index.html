@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>비사이드</title>
+	<meta name="author" content="비사이드" />
+	<meta name="description" content="비사이드" />
+	<meta name="keywords"  content="비사이드" />
+	<meta name="Resource-type" content="Document" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" type="text/css" href="./assets/css/reset.css" /> 
+	<link rel="stylesheet" type="text/css" href="./assets/css/jquery.fullPage.css" />
+	<link rel="stylesheet" type="text/css" href="./assets/css/common.css" /> 
+	<link rel="stylesheet" type="text/css" href="./assets/css/main.css">
+	<link rel="stylesheet" type="text/css" href="./assets/swiper/css/swiper.css">
+
+	<!--[if IE]>
+		<script type="text/javascript">
+			 var console = { log: function() {} };
+		</script>
+	<![endif]-->
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+	
+	<script type="text/javascript" src="./assets/js/scrolloverflow.js"></script>
+	<script type="text/javascript" src="./assets/js/jquery.fullPage.js"></script>
+	<script type="text/javascript" src="./assets/swiper/js/swiper.js"></script>
+	<script type="text/javascript" src="./assets//scripts/script.js"></script>
+	<!-- <script type="text/javascript" src="examples.js"></script> -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				anchors: ['page1', 'page2', 'page3', 'page4', 'page5', 'page6', 'page7'],
+				// sectionsColor: ['#52196a', '#52196a', '#121212', '#121212', '#121212', '#121212', '#52196a'],
+				scrollOverflow: true,
+
+			// 특정 인덱스일 때
+				'afterLoad': function (anchorLink, index) {
+					if (index == 1){
+						playVideo();
+					}
+				},	
+
+       		});
+		});
+	</script>
+
+<script src="https://www.youtube.com/iframe_api"></script><!-- 아래 원문에서 복잡하게 기술되었던 부분 -->
+<script>
+	var player;
+	function onYouTubeIframeAPIReady(){
+		player = new YT.Player('player',{
+		width:'100%',
+		height:'100%',
+		videoId:'LYVvptyrDm8',
+		playerVars:{autoplay:true, playsinline:1, playlist: 'LYVvptyrDm8' , loop: true, },
+		events:{ 'onReady':onPlayerReady }
+	});
+	}
+		function onPlayerReady(e){
+		e.target.mute();
+		e.target.setPlaybackQuality('highres');
+		e.target.playVideo();
+	}
+    function playVideo() {
+        player.playVideo();//재생
+    }
+</script>
+
+</head>
+<body class="HappinessR" style="background: #121212;">
+
+	<div class="top_btn">
+		<a href="#page1">
+			<img src="./assets/images/top_btn.png" alt="">
+		</a>
+	</div>	
+
+	<div id="fullpage">
+		
+		<div class="cursor">
+			<a href="#page2">
+				<img src="./assets/images/scroll.png" alt="">
+			</a>
+		</div>
+		<div class="section" id="section0">
+			<div class="main_bg"></div>
+			<div class="video-background">
+				<div class="video-foreground">
+					 <div id="player"></div>
+				  </div>
+			</div>			
+			<header id="header">
+				<div class="header_wrap">
+					<div class="logo">
+						<a href="./index.html">
+							<img src="./assets/images/logo.png" alt="로고 비사이드">
+						</a>
+					</div>
+					<ul class="gnb">
+						<li>
+							<button onclick="location.href='./services/voting.html'">전자위임</button>
+						</li>
+						<li>
+							<button onclick="location.href='./services/campaign.html'">캠페인</button>
+						</li>
+						<li>
+							<button onclick="location.href='./services/company.html'">회사소개</button>
+						</li>
+					</ul>
+					<div class="join">
+						<a href="#">회원가입</a>
+					</div>
+					<div class="ham ham_btn mo_only"><button><img src="./assets/images/ham.png" alt=""></button></div>
+				</div>
+		
+			</header>	
+			<div class="ham_box">
+				<div class="logo">
+					<img src="./assets/images/logo.png" alt="">
+				</div>
+				<h2>
+					비전과 투자가치를 공유하고<br/> 함께 소통해요                
+				</h2>
+				<div class="close_btn ham_btn">
+					<img src="./assets/images/modal_close.png" alt="">
+				</div>            
+				<ul>
+					<li>
+						<a href="./services/voting.html">
+							<h5>전자위임</h5>
+						</a>
+					</li>
+					<li>
+						<a href="./services/campaign.html">
+							<h5>캠페인</h5>
+						</a>
+					</li>
+					<li>
+						<a href="./services/company.html">
+							<h5>회사소개</h5>
+						</a>
+					</li>
+					<li>
+						<a class="modal_step_btn" modal_step="">
+							<h5>회원가입</h5>
+						</a>                       
+					</li>
+				</ul>            
+			</div>						
+			<div class="con">
+				<div class="head_tit">
+					<div class="img"><img src="./assets/images/phone.png" alt=""></div>
+					<h1>
+						행동하는<span>주주</span>
+						</br/>
+						커뮤니티<span>플랫폼</span></h1>
+				</div>
+				<ul class="btn_list">
+					<li>
+						<a href="./services/campaign.html#page3">캠페인 문의하기</a>
+					</li>
+					<li>
+						<a href="./services/campaign.html">캠페인 둘러보기</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="section" id="section1" style="background: #121212;">
+			<div class="con">
+				<div class="block1_bg">
+					<img src="./assets/images/block1.png" alt="">
+				</div>
+				<div class="block2_bg">
+					<img src="./assets/images/block2.png" alt="">
+				</div>
+				<div class="beside_before ">
+					<div class="txt">
+						<h5>비사이드 이전</h5>
+						<p>
+							소액주주가 투자한 상장사에 목소리를<br/>
+							내는 것은 <span>불가능</span>에 가까울 정도로<br/>
+							어렵고 복잡했습니다.
+						</p>
+					</div>
+					<div class="hand">
+						<img src="./assets/images/hand.png" alt="">
+					</div>
+				</div>
+				<!-- <div class="beside_before beside_before2 mo_only">
+					<div class="txt">
+						<h5>비사이드 이전</h5>
+						<p>
+							소액주주가 투자한 상장사에 목소리를<br/>
+							내는 것은 <span>불가능</span>에 가까울 정도로<br/>
+							어렵고 복잡했습니다.
+						</p>
+					</div>
+					<div class="hand">
+						<img src="./assets/images/hand.png" alt="">
+					</div>
+				</div> -->
+				<div class="arrow mo_only">
+					<img src="./assets/images/arrow.png" alt="">
+				</div>
+				<div class="beside_after ">
+					<div class="txt">
+						<h5>비사이드 이후</h5>
+						<p>
+							앱 하나로 여러 개인 투자자들의<br/>
+							목소리를 담아 상장사에게 전달하였고<br/> 
+							<span>긍정적인</span> 답변을 받을 수 있습니다.
+						</p>
+					</div>
+					<ul class="phone_list">
+						<li>
+							<img src="./assets/images/phone1.png" alt="">
+						</li>
+						<li>
+							<img src="./assets/images/phone2.png" alt="">
+						</li>
+						<li>
+							<img src="./assets/images/phone3.png" alt="">
+						</li>
+					</ul>
+				</div>
+				<!-- <div class="beside_after beside_after2 mo_only">
+					<div class="txt">
+						<h5>비사이드 이후</h5>
+						<p>
+							앱 하나로 여러 개인 투자자들의<br/>
+							목소리를 담아 상장사에게 전달하였고<br/> 
+							<span>긍정적인</span> 답변을 받을 수 있습니다.
+						</p>
+					</div>
+					<ul class="phone_list">
+						<li>
+							<img src="./assets/images/phone1.png" alt="">
+						</li>
+						<li>
+							<img src="./assets/images/phone2.png" alt="">
+						</li>
+						<li>
+							<img src="./assets/images/phone3.png" alt="">
+						</li>
+					</ul>
+				</div>				 -->
+			</div>
+		</div>
+		<div class="section" id="section2" style="background: #121212;">
+			<div class="con">
+				<div class="title">
+					<h1>
+						국내 최초로<br class="mo_only"/> 행동주의를 <br />성공시킨 플랫폼
+						<div class="mark mark1" style="background: url(./assets/images/mark1.png) no-repeat center center;">
+							Activism
+						</div>
+					</h1>
+					<p>
+						2022년 상반기 총 4개의 캠페인을 성공적으로 진행하거나<br class="pc_only"/>
+						진행 준비중에 있습니다. 2,200명이 넘는 주주가 1,200억의<br class="pc_only"/>
+						주식을 Bside 플랫폼을 통하여 위임하였습니다.						
+					</p>
+		
+				</div>
+				<ul class="company_list">
+					<li>
+						<img src="./assets/images/company1.png" alt="">
+					</li>
+					<li>
+						<img src="./assets/images/company2.png" alt="">
+					</li>
+					<li>
+						<img src="./assets/images/company3.png" alt="">
+					</li>
+					<li>
+						<img class="pc_only" src="./assets/images/company4.png" alt="">
+						<img class="mo_only" src="./assets/images/company4_mo.png" alt="">
+					</li>
+				</ul>
+				<div class="block9_bg mo_only"><img src="../assets/images/block3.png" alt=""></div>
+				<div class="block10_bg mo_only"><img src="../assets/images/block4.png" alt=""></div>										
+			</div>
+		</div>
+		<div class="section" id="section3" style="background: #121212;">
+			<div class="con">
+				<div class="title">
+					<h1>
+						국내 유일<br/>주주 플랫폼
+						<div class="link">
+							<a href="#">
+								<img src="./assets/images/link.png" alt="">
+							</a>
+						</div>
+					</h1>
+					<p>
+						Bside는 행동주의 전략을 원스탑으로 할 수 있는 국내 유일의 플랫폼입니다. 
+						<br/><br/>
+						전자위임을 통한 의결권 행사 뿐만 아니라 비사이드 플랫폼을 활용하여, 권유자 및 캠페인 참여 주주<br class="pc_only"/>
+						분들 모두 디지털 시대에 걸맞는 서비스를 제공받을 수 있습니다.			
+					</p>
+				</div>
+				<ul class="platform_list">
+					<li>
+						<div class="img">
+							<img class="pc" src="./assets/images/platform1.png" alt="">
+							<img class="mo" src="./assets/images/platform_mo1.png" alt="">
+						</div>
+						<div class="txt">
+							<h5>정보성</h5>
+							<p>
+								주주들이 이해하기 편한 미디어를 웹/앱에서 제공하여 캠페인에 대한 충분한 정보 제공
+							</p>
+						</div>
+					</li>
+					<li>
+						<div class="img">
+							<img class="pc" src="./assets/images/platform2.png" alt="">
+							<img class="mo" src="./assets/images/platform_mo2.png" alt="">
+						</div>
+						<div class="txt">
+							<h5>신뢰성</h5>
+							<p>
+								본인확인, 전자서명 및 비대면 신분증 사본 제출로 신뢰성 높은 위임장 제출
+							</p>
+						</div>
+					</li>
+					<li>
+						<div class="img">
+							<img class="pc" src="./assets/images/platform3.png" alt="">
+							<img class="mo" src="./assets/images/platform_mo3.png" alt="">
+						</div>
+						<div class="txt">
+							<h5>소통</h5>
+							<p>
+								캠페인에 참여한 다른 주주 및 모더레이터와 소통, 투표 등
+							</p>
+						</div>
+					</li>
+					<li>
+						<div class="img">
+							<img class="pc" src="./assets/images/platform4.png" alt="">
+							<img class="mo" src="./assets/images/platform_mo4.png" alt="">
+						</div>
+						<div class="txt">
+							<h5>편리성</h5>
+							<p>
+								앱 설치 후, 단 30초만에 의결권에 대한 위임을 완료 할 수 있음
+							</p>
+						</div>
+					</li>
+					<li>
+						<div class="img">
+							<img class="pc" src="./assets/images/platform5.png" alt="">
+							<img class="mo" src="./assets/images/platform_mo5.png" alt="">
+						</div>
+						<div class="txt">
+							<h5>실시간</h5>
+							<p>
+								캠페인에 대한 업데이트나 투표 결과를 실시간으로 확인 할 수 있음
+							</p>
+						</div>
+					</li>
+					<li>
+						<div class="img">
+							<img class="pc" src="./assets/images/platform6.png" alt="">
+							<img class="mo" src="./assets/images/platform_mo6.png" alt="">
+						</div>
+						<div class="txt">
+							<h5>집결성</h5>
+							<p>
+								동질성있는 타 캠페인 주주분들에게도 노출이 되어 주주집결력 극대화
+							</p>
+						</div>
+					</li>
+				</ul>	
+			</div>
+		</div>
+		<div class="section" id="section4" style="background: #121212;">
+			<div class="con">
+				<div class="title">
+					<h1>
+						주주소통을 위한<br/>
+						더 좋은 방법
+					</h1>
+					<p>
+						실행력 있는 국내 최고의 주주 커뮤니티로서,<br class="pc_only"/>
+						디지털 시대에 걸맞는 다양한 형태의 주주소통을 추진할 수 있습니다.					
+					</p>
+				</div>
+				<div class="process pc_only">
+					<ul class="txt_list">
+						<li>
+							<input type="radio" name="process" id="process1" value="event1" checked>
+							<label for="process1">
+								<h5>
+									1
+								</h5>
+								<h4>
+									업무 미팅 & <br/>핵심 안건 정의
+								</h4>
+								<p>
+									회사의 성장과 기업가치 제고를 위해 안건을<br/>소액주주들에게 잘 전달 될 수 있도록 미팅을<br/>진행합니다.
+								</p>
+							</label>
+						</li>
+						<li>
+							<input type="radio" name="process" id="process2" value="event2">
+							<label for="process2">
+								<h5>
+									2
+								</h5>
+								<h4>
+									캠페인 <br/>
+									오픈 및 시작
+								</h4>
+								<p>
+									실시간 주주소통을 위하여 라운지를 오픈합니다.
+								</p>
+							</label>
+						</li>
+						<li>
+							<input type="radio" name="process" id="process3" value="event3">
+							<label for="process3">
+								<h5>
+									3
+								</h5>
+								<h4>
+									콘텐츠 개발 및 <br/>마케팅 진행
+								</h4>
+								<p>
+									접하기 어려운 정보들을 주주들에게 쉽게 전달해주고,<br/> 
+									주주권리를 침해하는 것을 방지하여 거번넌스 근본적<br/> 
+									개선을 위하여 홍보합니다.
+								</p>
+							</label>
+						</li>
+						<li>
+							<input type="radio" name="process" id="process4" value="event4">
+							<label for="process4">
+								<h5>
+									4
+								</h5>
+								<h4>
+									전자위임 및<br/>소유자증명서
+								</h4>
+								<p>
+									주주제안 단계에서는 소유자증명서를 모을 수 있으며,<br/>
+									주주총회 단계에서는 전자위임을 진행합니다.
+								</p>
+							</label>
+						</li>
+					</ul>
+					<div class="img" id="img_radio">
+						<img src="./assets/images/process1.png" alt="">
+					</div>
+				</div>
+				<div class="process_2 mo_only">
+					<ul class="txt_list">
+						<li style="background: url(./assets/images/process_mo1.png) no-repeat right -30%; background-size: 270px;">
+							<div class="bg"></div>
+							<div class="txt">
+								<h4>
+									업무 미팅 & <br/>핵심 안건 정의
+								</h4>
+								<p>
+									회사의 성장과 기업가치 제고를 위해 안건을<br/>
+									소액주주들에게 잘 전달 될 수 있도록 미팅을<br/>
+									진행합니다.
+								</p>
+							</div>
+						</li>
+						<li style="background: url(./assets/images/process_mo2.png) no-repeat right -30%; background-size: 270px;">
+							<div class="bg"></div>
+							<div class="txt">
+								<h4>
+									캠페인 <br/>
+									오픈 및 시작
+								</h4>
+								<p>
+									실시간 주주소통을 위하여 라운지를 오픈합니다.
+								</p>
+							</div>
+						</li>
+						<li style="background: url(./assets/images/process_mo3.png) no-repeat right -30%; background-size: 270px;">
+							<div class="bg"></div>
+							<div class="txt">
+								<h4>
+									콘텐츠 개발 및 <br/>마케팅 진행
+								</h4>
+								<p>
+									접하기 어려운 정보들을 주주들에게 쉽게 전달해주고,<br class="pc_only"/> 
+									주주권리를 침해하는 것을 방지하여 거번넌스 근본적<br class="pc_only"/> 
+									개선을 위하여 홍보합니다.
+								</p>
+							</div>
+						</li>
+						<li style="background: url(./assets/images/process_mo4.png) no-repeat right -30%; background-size: 270px;">
+							<div class="bg"></div>
+							<div class="txt">
+								<h4>
+									전자위임 및<br/>소유자증명서
+								</h4>
+								<p>
+									주주제안 단계에서는 소유자증명서를 모을 수 있으며,<br class="pc_only"/> 
+									주주총회 단계에서는 전자위임을 진행합니다.
+								</p>
+							</div>
+						</li>
+					</ul>
+				</div>				
+			</div>
+		</div>
+		<div class="section" id="section5" style="background: #121212;">
+			<div class="con pc_only">
+				<div class="title">
+					<h1>
+						From. 미디어
+						<!-- <div class="link">
+							<a href="#">
+								<img src="./assets/images/link.png" alt="">
+							</a>
+						</div> -->
+						<div class="mark mark2" style="background: url(./assets/images/mark3.png) no-repeat center center; background-size: cover;">
+							Media
+						</div>
+					</h1>
+					<p class="">
+						각종 미디어 매체에서 언급된 비사이드를 만나보세요.			
+					</p>
+					<div class="slider pc_only">
+						<!-- Swiper -->
+						<div class="swiper mySwiper">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide" style="background: url(./assets/images/slide1.png) no-repeat center center; background-size: cover;">
+									<a href="https://www.thebell.co.kr/free/Content/ArticleView.asp?key=202204211356533600109658&svccode=03" target="_blank">
+										<div class="bg"></div>
+										<div class="head">
+											<div class="left">
+												<div class="thumb">
+													<img src="./assets/images/thumb1.png" alt="">
+												</div>
+												<div class="info">
+													<p>더벨 | 허인혜 기자</p>
+													<p>2022/04/25</p>
+												</div>
+											</div>
+											<div class="right"><p>뉴스</p></div>
+										</div>
+										<div class="txt">
+											<h2>
+												주주 결집시킨 행동주의,<br/>
+												‘전자위임’이 결과 바꿨다										
+											</h2>
+											<p>
+												임성철 비사이드코리아 대표 “전자서명 활용, 효율성 극대화”<br/>
+												얼라인파트너스가 SM엔터테인먼트 주주총회에서 주주추천 감사 선임에 성공하면서 의결권 위임에 대한 금융투자업계의 관심이 집중되고 있다. 오프라인으로만 이뤄지던 의결권 위임이 가능하게 한 점이 신생 자산운용사를 승리로 이끌었다. 이창환 얼라인파트너스와 의기투합한 임성철 비사…											
+											</p>
+										</div>
+									</a>
+
+								</div>
+								<div class="swiper-slide" style="background: url(./assets/images/slide2.png) no-repeat center center; background-size: cover;">
+									<a href="https://www.sedaily.com/NewsView/264JT68UTI" target="_blank">
+										<div class="bg"></div>
+										<div class="head">
+											<div class="left">
+												<div class="thumb">
+													<img src="./assets/images/thumb2.png" alt="">
+												</div>
+												<div class="info">
+													<p>서울경제 | 김경미 기자</p>
+													<p>2022/04/03</p>
+												</div>
+											</div>
+											<div class="right"><p>뉴스</p></div>
+										</div>
+										<div class="txt">
+											<h2>
+												SM주총으로 새 역사 쓴 개미들… ’<br/>
+												주주 중심주의’ 향한 작지만 큰 발걸음								
+											</h2>
+											<p>
+												동학개미·ESG 변화에 사뭇 달라진 주총 풍경들에스엠 주총, 소액주주 승전고 새 역사 쓰고주주 목소리에 셀트리온 대표 최저임금 받기로 주주제안 잇따랐던 행동주의 펀드도 소기의 성과’작지만 큰 발걸음’에 주주 행동주의 원년될까 관심. 코로나 사태 이후 등장한 동학 개미는 우리 증시 곳곳의 풍경을 크게 바꿔놓고 있는 중입니다. 특히 올해 정기 주주총회는 개인 투…	
+											</p>
+										</div>
+									</a>
+								</div>
+								<div class="swiper-slide" style="background: url(./assets/images/slide3.png) no-repeat center center; background-size: cover;">
+									<a href="https://news.sbs.co.kr/news/endPage.do?news_id=N1006697591" target="_blank">									
+										<div class="bg"></div>
+										<div class="head">
+											<div class="left">
+												<div class="thumb">
+													<img src="./assets/images/thumb3.png" alt="">
+												</div>
+												<div class="info">
+													<p>SBS | 조기호 기자</p>
+													<p>2022/04/01</p>
+												</div>
+											</div>
+											<div class="right"><p>영상</p></div>
+										</div>
+										<div class="txt">
+											<h2>
+												소액주주 반란 성공···<br/>
+												SM 감사 바뀌었다
+											</h2>
+											<p>
+												대형 엔터테인먼트 회사인 SM의 주주총회에서 의미 있는 이변이 일어났습니다. 감사 선임 문제를 놓고 소액주주와 대주주가 맞붙었는데 소액주주들이 내세운 감사가 압도적인 표 차이로 선임됐습니다. 조기호 기자가 취재했습니다. <기자> SM 엔터테인먼트 주주총회는 예정보다 2시간 늦게 시작됐습니다. 회사와 소액주주들 모두 위임장을 꼼꼼히 확인했기 때문…					
+											</p>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>						
+					</div>				
+					<div class="more_btn">
+						<a href="#">
+							소식 더보기
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="con mo_only">
+				<div class="title">
+					<h1>
+						From. 미디어
+						<!-- <div class="link">
+							<a href="#">
+								<img src="./assets/images/link.png" alt="">
+							</a>
+						</div> -->
+
+						<div class="mark mark2" style="background: url(./assets/images/mark3.png) no-repeat center center; background-size: cover;">
+							Media
+						</div>						
+					</h1>
+
+
+					<div class="slide_box mo_only">
+						<div class="swiper-slide" style="background: url(./assets/images/slide1.png) no-repeat center center; background-size: cover;">
+							<a href="https://www.thebell.co.kr/free/Content/ArticleView.asp?key=202204211356533600109658&svccode=03" target="_blank">
+								<div class="bg"></div>
+								<div class="head">
+									<div class="left">
+										<div class="thumb">
+											<img src="./assets/images/thumb1.png" alt="">
+										</div>
+										<div class="info">
+											<p>더벨 | 허인혜 기자</p>
+											<p>2022/04/25</p>
+										</div>
+									</div>
+									<div class="right"><p>뉴스</p></div>
+								</div>
+								<div class="txt">
+									<h2>
+										주주 결집시킨 행동주의,<br/>
+										‘전자위임’이 결과 바꿨다										
+									</h2>
+								</div>
+							</a>
+
+						</div>
+						<div class="swiper-slide" style="background: url(./assets/images/slide2.png) no-repeat center center; background-size: cover;">
+							<a href="https://www.sedaily.com/NewsView/264JT68UTI" target="_blank">
+								<div class="bg"></div>
+								<div class="head">
+									<div class="left">
+										<div class="thumb">
+											<img src="./assets/images/thumb2.png" alt="">
+										</div>
+										<div class="info">
+											<p>서울경제 | 김경미 기자</p>
+											<p>2022/04/03</p>
+										</div>
+									</div>
+									<div class="right"><p>뉴스</p></div>
+								</div>
+								<div class="txt">
+									<h2>
+										SM주총으로 새 역사 쓴 개미들… ’<br/>
+										주주 중심주의’ 향한 작지만 큰 발걸음								
+									</h2>
+								</div>
+							</a>
+						</div>						
+					</div>					
+					<div class="more_btn">
+						<a href="#">
+							소식 더보기
+						</a>
+					</div>
+				</div>
+			</div>			
+		</div>
+
+		<div class="section last" id="section6" style="background: #572E66;">
+			<div class="dark_bg">
+				<div class="txt">
+					<a href="#page6">
+						<div class="up"><img src="./assets/images/up.png" alt=""></div>
+						<p>위로가기</p>
+					</a>
+				</div>
+			</div>
+			<div class="con center">
+				<div class="title">
+					<h1>
+						비사이드 뉴스와<br/>
+						업데이트 알림이<br/> 
+						필요하신가요?
+					</h1>
+				</div>
+				<div class="form type1">
+					<form action="">
+						<div class="input_wrap">
+							<input type="text" placeholder="이메일을 입력해주세요.">
+						</div>
+						<button type="submit">구독하기</button>
+						<p>
+							귀하의 데이터는 안전하게 보관되며 절대 다른 용도로 사용되지 않습니다.<br class="mo_only"/>
+							개인 정보처리방침을 확인해주세요.
+						</p>
+					</form>
+				</div>
+			</div>
+			<footer>
+				<div class="con">
+					<div class="left">
+						<ul>
+							<li>
+								<a href="#">개인정보 처리방침</a>
+							</li>
+							<li>
+								<a href="#">이용약관</a>
+							</li>
+							<li>
+								<a href="#">채용</a>
+							</li>
+						</ul>
+					</div>
+					<div class="right">
+						<p>
+							문의메일 info@bside.ai<br/>
+							비사이드코리아<br/>
+							사업자 등록번호 : 174-87-02329
+						</p>
+					</div>
+				</div>
+			</footer>
+		</div>		
+	</div>
+
+
+    <!-- 모달 -->
+    <!-- <div class="modal modal modal_step modal_step1 hidden">
+        <div class="modal_overlay">
+        </div>
+        <div class="modal_content modal_md scrollbar">
+            <div class="layoutCont">
+                <div class="certiTxt">
+                    <div class="modalContWrap">
+                        <div class="modal_close cancerButton">
+                          <img src="./assets/images/modal_close.png" alt="모달 닫기버튼">
+                        </div>                      
+                        <div class="modal_head">
+                        </div>
+                        <div class="modal_con">
+                          모달 오픈                           
+                        </div>
+
+                    </div>
+                    <div class="confirm_button">
+                        <button class="cancerButton agree" type="button">닫기</button>
+                    </div>
+                </div>           
+            </div>
+        </div>
+    </div> -->
+
+
+</body>
+</html>
+<script>
+	var swiper = new Swiper(".mySwiper", {
+  		loop : false,
+		slidesPerView: 2,
+		centeredSlides : true, // true시에 슬라이드가 가운데로 배치
+		spaceBetween : 40, // 슬라이드 사이 여백
+	});
+</script>

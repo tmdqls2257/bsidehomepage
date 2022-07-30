@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>비사이드</title>
+	<meta name="author" content="비사이드" />
+	<meta name="description" content="비사이드" />
+	<meta name="keywords"  content="비사이드" />
+	<meta name="Resource-type" content="Document" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" type="text/css" href="../assets/css/reset.css" /> 
+	<link rel="stylesheet" type="text/css" href="../assets/css/jquery.fullPage.css" />
+	<link rel="stylesheet" type="text/css" href="../assets/css/common.css" /> 
+	<!-- <link rel="stylesheet" type="text/css" href="../assets/css/main.css">  -->
+	<link rel="stylesheet" type="text/css" href="../assets/css/sub.css">
+	<link rel="stylesheet" type="text/css" href="../assets/swiper/css/swiper.css">
+
+	<!--[if IE]>
+		<script type="text/javascript">
+			 var console = { log: function() {} };
+		</script>
+	<![endif]-->
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+	
+	<script type="text/javascript" src="../assets/js/scrolloverflow.js"></script>
+	<script type="text/javascript" src="../assets/js/jquery.fullPage.js"></script>
+	<script type="text/javascript" src="../assets/swiper/js/swiper.js"></script>
+	<script type="text/javascript" src="../assets//scripts/script.js"></script>
+	<!-- <script type="text/javascript" src="examples.js"></script> -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				anchors: ['page1', 'page2', 'page3'],
+				// sectionsColor: ['#52196a', '#52196a', '#52196a', '#52196a', '#52196a', '#52196a', '#52196a', '#52196a', '#52196a', '#52196a'],
+				scrollOverflow: true,
+
+
+				// 특정 인덱스일 때
+				'afterLoad': function (anchorLink, index) {
+					if (index == 1){
+						playVideo();
+					}
+				},					
+
+
+       		});
+		});
+	</script>
+
+<script src="https://www.youtube.com/iframe_api"></script><!-- 아래 원문에서 복잡하게 기술되었던 부분 -->
+<script>
+	var player;
+	function onYouTubeIframeAPIReady(){
+		player = new YT.Player('player',{
+		width:'100%',
+		height:'100%',
+		videoId:'uD5DkjeTP0s',
+		playerVars:{autoplay:true, playsinline:1, playlist: 'uD5DkjeTP0s' , loop: true, },
+		events:{ 'onReady':onPlayerReady }
+	});
+	}
+		function onPlayerReady(e){
+		e.target.mute();
+		e.target.setPlaybackQuality('highres');
+		e.target.playVideo();
+	}
+
+
+    function playVideo() {
+        player.playVideo();//재생
+    }
+
+</script>
+
+<style>
+  @media (max-aspect-ratio: 16/9) {
+    .video-foreground {
+       height: 325%;
+    }
+  }
+</style>
+
+</head>
+<body class="HappinessR">
+
+	<div class="top_btn">
+		<a href="#page1">
+			<img src="../assets/images/top_btn.png" alt="">
+		</a>
+	</div>	
+
+	<div class="campaign" id="fullpage">
+		
+		<div class="cursor">
+			<a href="#page2">
+				<img src="../assets/images/scroll.png" alt="">
+			</a>
+		</div>
+		<div class="section" id="section0">
+			<div class="sub_bg"></div>
+			<div class="video-background">
+				<div class="video-foreground">
+					 <div id="player"></div>
+				  </div>
+			</div>				
+			<header id="header">
+				<div class="header_wrap">
+					<div class="logo">
+						<a href="../index.html">
+							<img src="../assets/images/logo.png" alt="로고 비사이드">
+						</a>
+					</div>
+					<ul class="gnb">
+						<li>
+							<button onclick="location.href='../services/voting.html'">전자위임</button>
+						</li>
+						<li>
+							<button onclick="location.href='../services/campaign.html'">캠페인</button>
+						</li>
+						<li>
+							<button onclick="location.href='../services/company.html'">회사소개</button>
+						</li>
+					</ul>
+					<div class="join">
+						<a href="#">회원가입</a>
+					</div>
+					<div class="ham ham_btn mo_only"><button><img src="../assets/images/ham.png" alt=""></button></div>
+				</div>
+			</header>
+			<div class="ham_box">
+				<div class="logo">
+					<img src="../assets/images/logo.png" alt="">
+				</div>
+				<h2>
+					비전과 투자가치를 공유하고<br/> 함께 소통해요                
+				</h2>
+				<div class="close_btn ham_btn">
+					<img src="../assets/images/modal_close.png" alt="">
+				</div>            
+				<ul>
+					<li>
+						<a href="./voting.html">
+							<h5>전자위임</h5>
+						</a>
+					</li>
+					<li>
+						<a href="./campaign.html">
+							<h5>캠페인</h5>
+						</a>
+					</li>
+					<li>
+						<a href="./company.html">
+							<h5>회사소개</h5>
+						</a>
+					</li>
+					<li>
+						<a class="modal_step_btn" modal_step="">
+							<h5>회원가입</h5>
+						</a>                       
+					</li>
+				</ul>            
+			</div>            
+			<div class="con">
+				<div class="title">
+					<h1>
+                        캠페인을<br/>역동적으로<br/>관리해보세요
+						<div class="mark mark3" style="background: url(../assets/images/mark2.png) no-repeat center center; background-size: cover;">Campaign</div>
+					</h1>
+					<p>
+                        전문적인 캠페인 컨텐츠 제작을 진행하고, 유튜브, 인스타 등 뉴미디어 노출을 적극적으로 진행하여
+                        1,400만명의 소액주주들에게 캠페인의 필요성을 적극 어필하여 실시간 소통을 할 수 있습니다.
+					</p>
+				</div>
+			</div>
+		</div>  
+
+		<div class="section" id="section1" style="background: transparent linear-gradient(180deg, #2b1939 0%, #121212 100%) 0% 0% no-repeat padding-box;">
+			<div class="con">
+				<div class="title">
+					<h1>
+						다양한 캠페인
+					</h1>
+					<p>
+                        현재 진행중, 진행 예정이거나 완료된 캠페인을 확인해보세요.					
+					</p>
+				</div>
+				<ul class="company_list">
+					<li>
+						<img src="../assets/images/company1.png" alt="">
+						<p><span>에스엠</span><br/>2021. 3월 시작</p>
+					</li>
+					<li>
+						<img src="../assets/images/company2.png" alt="">
+						<p><span>사조산업</span><br/>2021. 3월 시작</p>
+					</li>
+					<li>
+						<img src="../assets/images/company3.png" alt="">
+						<p><span>금호석유화학</span><br/>2021. 3월 시작</p>
+					</li>
+					<li>
+						<img class="pc_only" src="../assets/images/company4.png" alt="">
+						<img class="mo_only" src="../assets/images/company4_mo.png" alt="">
+						<p><span>TLI</span><br/>2021. 3월 시작</p>
+					</li>
+				</ul>			
+			</div>
+		</div>        
+
+		<div class="section last" id="section2" style="background: #572E66;">
+
+			<div class="dark_bg">
+				<div class="txt">
+					<a href="#page2">
+						<div class="up"><img src="../assets/images/up.png" alt=""></div>
+						<p>위로가기</p>
+					</a>
+				</div>
+			</div>			
+			<div class="con center">
+				<div class="title">
+					<h1>
+                        캠페인 문의
+					</h1>
+                    <p>
+                        캠페인 관련 문의사항을 남겨주시면<br/>최대한 빠른 시일내에 답변드리겠습니다.<br/>
+                        Email: support@bside.ai                        
+                    </p>
+				</div>
+				<div class="form type2">
+					<form action="">
+						<div class="input_wrap">
+							<input type="text" placeholder="성함">
+							<input type="text" placeholder="대상 회사">
+						</div>
+						<div class="input_wrap">
+							<input type="text" placeholder="이메일">
+							<input type="text" placeholder="전화번호"
+    oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+						</div>
+                        <div class="textarea">
+                            <textarea placeholder="문의 내용 (최대 500자)" name="" id="" maxlength="500"></textarea>
+                        </div>
+						<button type="submit">전송</button>
+					</form>
+				</div>
+			</div>
+			<footer>
+				<div class="con ">
+					<div class="left">
+						<ul>
+							<li>
+								<a href="#">개인정보 처리방침</a>
+							</li>
+							<li>
+								<a href="#">이용약관</a>
+							</li>
+							<li>
+								<a href="#">채용</a>
+							</li>
+						</ul>
+					</div>
+					<div class="right">
+						<p>
+							문의메일 info@bside.ai<br/>
+							비사이드코리아<br/>
+							사업자 등록번호 : 174-87-02329
+						</p>
+					</div>
+				</div>
+			</footer>
+		</div>		            
+	</div>
+
+
+    <!-- 모달 -->
+    <!-- <div class="modal modal modal_step modal_step1 hidden">
+        <div class="modal_overlay">
+        </div>
+        <div class="modal_content modal_md scrollbar">
+            <div class="layoutCont">
+                <div class="certiTxt">
+                    <div class="modalContWrap">
+                        <div class="modal_close cancerButton">
+                          <img src="../assets/images/modal_close.png" alt="모달 닫기버튼">
+                        </div>                      
+                        <div class="modal_head">
+                        </div>
+                        <div class="modal_con">
+                          모달 오픈                           
+                        </div>
+
+                    </div>
+                    <div class="confirm_button">
+                        <button class="cancerButton agree" type="button">닫기</button>
+                    </div>
+                </div>           
+            </div>
+        </div>
+    </div> -->
+
+
+</body>
+</html>

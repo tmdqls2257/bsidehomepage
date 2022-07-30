@@ -1,0 +1,618 @@
+#fullpage #section0 .con{
+    position: absolute;
+    left: 50%;
+    top: 65%;
+    transform: translate(-50%, -50%);
+    padding-right: 0;
+    padding-left: 0;
+}
+#fullpage #section0 .con .title{
+    text-align: left;
+}
+/* voting */
+.voting #section9 .con .title h1{
+    transform: translateY(-100px);
+    transition: 1s;
+}
+.voting #section9.active .con .title h1{
+    transform: translateY(0);
+}
+.voting .section .con .step {
+    display: flex;
+    align-items: center;
+}
+.voting .section .con .step > div{
+    width: 50%;
+    height: 100vh;
+}
+.voting .section .con .step > .left{
+    display: flex;
+    align-items: center;
+    padding-left: 48px;
+    padding-right: 53px;
+    box-sizing: border-box;
+}
+.voting .section .con .step > .left ul.number{
+    margin-right: 61px;
+    flex: none;
+}
+.voting .section .con .step > .left ul.number li{
+    line-height: 34px;
+    opacity: 0.5;
+}
+.voting .section .con .step > .left ul.number li.on{
+    opacity: 0.8;
+}
+.voting .section .con .step > .left .txt h1{
+    font-size: 80px;
+    font-weight: 900;
+    margin-bottom: 40px;
+    line-height: 100px;
+}
+.voting .section .con .step > .left .txt p{
+    font-size: 24px;
+    line-height: 30px;
+}
+.voting .section .con .step > .right .img{
+    border-radius: 0px 0px 20px 20px;
+    height: 100%;
+}
+#fullpage #section9 .con .title{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-top: 0;
+    margin-bottom: 0;
+}
+#fullpage .section .con ul.btn_list li a{
+    background: #7c299a;
+    font-size: 24px;
+    width: 366px;
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 11px 0;
+    text-align: center;
+    font-weight: 700;
+    border-radius: 317px;
+}
+#fullpage #section0 .con h1{
+    font-size: 140px;
+    line-height: 160px;
+}
+#fullpage.voting .section.steps{
+    background: #121212;
+}
+#fullpage.voting #section0 .con h1{
+    width: 1136px;
+}
+/* campaign */
+#fullpage.campaign #section0 .con{
+    top: 55%;
+}
+/* #fullpage.campaign #section0 .con h1{
+    width: 800px;
+    margin: 0 auto;
+    display: block;
+} */
+#fullpage.campaign #section0 .con p{
+    text-align: center;
+}
+#fullpage.campaign #section1 .con{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#fullpage.campaign #section1 .con .title{
+    padding-top: 0;
+    transform: scale(1.5);
+    transition: .5s;
+    opacity: 0;
+}
+#fullpage.campaign #section1.active .con .title{
+    padding-top: 0;
+    transform: scale(1);
+    opacity: 1;
+}
+#fullpage .section .con ul.company_list li:nth-child(1){
+    transform: translateY(100px);
+}
+#fullpage .section .con ul.company_list li:nth-child(2){
+    transform: translateY(75px);
+}
+#fullpage .section .con ul.company_list li:nth-child(3){
+    transform: translateY(50px);
+}
+#fullpage .section .con ul.company_list li:nth-child(4){
+    transform: translateY(25px);
+}
+#fullpage .section .con ul.company_list li{
+    transition: 2s;
+}
+#fullpage .section.active .con ul.company_list li{
+    transform: translateY(0);
+}
+#fullpage.campaign #section2 .con .from{
+    position: relative;
+    z-index: 10;
+}
+#fullpage.campaign #section2 .con .title{
+    margin-bottom: 50px;
+}
+
+#fullpage .section .con .title.type2{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-top: 0;
+    margin-bottom: 0;
+}
+#fullpage .section .con .title.type2 p{
+    text-align: left;
+    position: relative;
+    z-index: 3;
+}
+#fullpage .section .con .event p{
+    text-align: center;
+    padding-top: 110px;
+    line-height: 30px;
+}
+#fullpage .section .con .event p span{
+    margin-bottom: 40px;
+    display: block;
+    font-weight: 900;
+}
+#fullpage.company #section2{
+    overflow: hidden;
+}
+#fullpage.company #section3 .con .title h1{
+    text-align: center;
+}
+#fullpage .section .con ul.company_list li{
+    text-align: center;
+}
+#fullpage .section .con ul.company_list li p{
+    margin-top: 40px;
+    font-size: 18px;
+    line-height: 24px;
+    transition: .3s;
+    transform: translateY(-100px);
+    position: relative;
+    z-index: -1;
+}
+#fullpage .section .con ul.company_list li:hover p{
+    transform: translateY(0);
+    z-index: 1;
+}
+#fullpage .section .con ul.company_list li p span{
+    font-weight: 900;
+}
+.btn{
+    width: 358px;
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    font-size: 24px;
+    color: #fff;
+    background: #e2731c 0% 0% no-repeat padding-box;
+    /* border: 2px solid #e2731c; */
+    border-radius: 317px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+}
+.btn.purple{
+    background: #7c299a;
+}
+@media screen and (max-width: 1800px){
+    #fullpage #section0 .con h1{
+        font-size: 126px;
+    }
+}
+
+@media screen and (max-width: 1600px){
+    #fullpage #section0 .con h1{
+        font-size: 100px;
+        line-height: 120px;
+    }
+}
+@media screen and (max-width: 1300px){
+    #fullpage .section .con .title{
+        padding-top: 0;
+    }
+    #fullpage .section .con .title.type2{
+        width: 90%;
+    }
+    #fullpage .section .con ul.company_list{
+        flex-wrap: wrap;
+        max-width: 680px;
+        margin: 0 auto;
+        margin-top: 120px;
+
+    }
+
+    #fullpage .section .con ul.company_list li p{
+        transform: translateY(0);
+        z-index: 1;
+
+    }
+    #fullpage.voting #section0 .con h1{
+        /* width: 600px; */
+        font-size: 80px;
+        line-height: 100px;
+        display: block;
+    }
+    #fullpage.campaign #section0 .con h1{
+        /* width: 600px; */
+        font-size: 80px;
+        line-height: 100px;
+        display: block;
+    }
+    #fullpage.company #section0 .con h1{
+        /* width: 600px; */
+        font-size: 80px;
+        line-height: 100px;
+        display: block;
+    }
+    #fullpage #section0 .con{
+        width: 90%;
+    }
+    #fullpage.campaign #section1 .con{
+        position: unset;
+        transform: unset;
+    }
+    #fullpage #section0 .con{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 3;
+    }
+    #fullpage .section .con .title p{
+        position: relative;
+        z-index: 3;
+    }
+    /* #fullpage #section0 .con{
+        position: unset;
+        transform: unset;
+    }
+    #fullpage #section0 .con .head_tit .img{
+        position: unset;
+        transform: unset;
+        margin-top: 22px;
+    } */
+    #fullpage #section0 .con .head_tit > h1{
+        font-size: 80px;
+        display: inline-block;
+        margin: 0 auto;
+    }    
+    .voting .section .con .step{
+        display: block;
+    }
+    .voting .section .con .step > div{
+        width: 100%;
+    }
+    .voting .section .con .step > .right .img{
+        background-size: 70% !important;
+    }
+    .voting .section .con .step > .left{
+        height: auto;
+        justify-content: center;
+        padding-top: 100px;
+        padding-bottom: 40px;
+        text-align: center;
+    }
+    .voting .section .con .step > .left ul.number{
+        display: none;
+    }
+
+    #fullpage .section .con ul.btn_list{
+        /* padding-bottom: 100px; */
+        display: block;
+    }
+    #fullpage .section .con ul.btn_list{
+        margin-top: 0;
+    }
+    #fullpage .section .con ul.btn_list li:last-child a{
+        margin-top: 24px;
+    }
+    .voting .section .con .step > .right{
+        /* height: 100vh; */
+    }
+    #fullpage.voting #section9 .con .title{
+        position: unset;
+        transform: unset;
+    }
+    #fullpage.voting #section9 .con{
+        padding-top: 220px;
+        padding-bottom: 175px;
+    }
+    #fullpage .cursor{
+        display: none;
+    }
+    #fullpage .section .con .form.type2 form input{
+        width: 650px;
+        margin-right: 0;
+        margin-left: 0;
+    }
+    #fullpage .section .con .form form .textarea textarea{
+        width: 650px;
+    }
+    #fullpage.campaign #section1 .con{
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+    #fullpage.campaign #section2 .con{
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+    #fullpage .section .con ul.company_list li{
+        width: 45%;
+        margin-bottom: 79.5px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    #fullpage .section .con ul.company_list li img{
+        width: 100%;
+    }
+
+    #fullpage.voting #section1{
+        background: #7c299a !important;
+    }
+    #fullpage.voting #section2{
+        background: #e2731c;
+    }
+    #fullpage.voting #section3{
+        background: #eeb304;
+    }
+    #fullpage.voting #section4{
+        background: #572e66;
+    }
+    #fullpage.voting #section5{
+        background: #7c299a;
+    }
+    #fullpage.voting #section6{
+        background: #e2731c;
+    }
+    #fullpage.voting #section7{
+        background: #eeb304;
+    }
+    #fullpage.voting #section8{
+        background: #7c299a;
+    }
+    #fullpage .section .con .block7_bg {
+
+        left: -90px;
+        top: -400px;
+    }    
+    #fullpage .section .con .block8_bg {
+        position: absolute;
+        z-index: 2;
+        right: -700px;
+        top: 50px;
+        transform: scale(0.7);
+    }
+    #fullpage .section .con .hand2{
+        left: -830px;
+        top: -200px;
+        opacity: 0.5;
+    }
+    /* .voting .section .con .step.step7 > .right .img{
+        background: url(../images/step_mo7.png) no-repeat #eeb304 center center !important;
+        background-size: cover !important;
+    }
+    .voting .section .con .step.step8 > .right .img{
+        background: url(../images/step_mo8.png) no-repeat #7c299a center center !important;
+        background-size: cover !important;
+    } */
+
+}
+.voting .section .con .step .right img{
+    display: none;
+}
+@media screen and (max-width: 700px){
+    #fullpage .section .con ul.company_list{
+        margin-top: 56px;
+    }
+    #fullpage.voting #section0 .con h1{
+        font-size: 48px;
+        line-height: 54px;
+    }
+    #fullpage.campaign #section0 .con h1{
+        font-size: 48px;
+        line-height: 54px;
+    }    
+    #fullpage.company #section0 .con h1{
+        font-size: 48px;
+        line-height: 54px;
+    }    
+    .voting .section .con .step > .left .txt h1{
+        font-size: 48px;
+        line-height: 54px;
+    }
+    #fullpage.voting #section0 .con h1{
+        width: 400px;
+    }
+    /* #fullpage.campaign #section0 .con h1{
+        width: 400px;
+    } */
+    #fullpage.campaign .section .con .title p{
+        text-align: center;
+        line-height: 30px;
+        font-size: 18px;
+    }
+    #fullpage .section .con ul.btn_list li a{
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .voting .section .con .step .right img{
+        display: block;
+        width: 100%;
+    }
+    .voting .section .con .step.step1{
+        background: #7c299a !important;
+    }
+    .voting .section .con .step.step1 > .right .img{
+        background: url() no-repeat #7c299a center center !important;
+        background-size: cover !important;
+    }
+    .voting .section .con .step.step2 > .right .img{
+        background: url() no-repeat #e2731c center center !important;
+        background-size: cover !important;
+    }
+    .voting .section .con .step.step3 > .right .img{
+        background: url() no-repeat #eeb304 center center !important;
+        background-size: cover !important;
+    }
+    .voting .section .con .step.step4 > .right .img{
+        background: url() no-repeat #572e66 center center !important;
+        background-size: cover !important;
+    }
+    .voting .section .con .step.step5 > .right .img{
+        background: url() no-repeat #7c299a center center !important;
+        background-size: cover !important;
+    }
+    .voting .section .con .step.step6 > .right .img{
+        background: url() no-repeat #e2731c center center !important;
+        background-size: cover !important;
+    }
+    .voting .section .con .step.step7 > .right .img{
+        background: url() no-repeat #eeb304 center center !important;
+        background-size: cover !important;
+    }
+    .voting .section .con .step.step8 > .right .img{
+        background: url() no-repeat #7c299a center center !important;
+        background-size: cover !important;
+    }
+    .voting .section .con .step > .right{
+        height: 100%;
+    }
+    .voting .section .con .step > .right .img{
+        height: 636px;
+        border-radius: 0;
+    }
+    .voting .section .con .step > .left .txt p{
+        font-size: 14px;
+        line-height: 20px;
+    }
+    #fullpage .section .con .form.type2 form input{
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        font-size: 14px;
+        margin-bottom: 40px;
+    }
+    #fullpage .section .con .form.type2 form input::placeholder{
+        font-weight: 300;
+        color: #000;
+    }
+    #fullpage .section .con .form form .textarea textarea{
+        width: 100%;
+        font-size: 14px;
+        margin-bottom: 40px;
+    }
+    #fullpage .section .con .form form .textarea textarea::placeholder{
+        font-weight: 300;
+        color: #000;
+    }
+    #fullpage .section .con .form form button{
+        width: 100%;
+        font-size: 18px;
+        margin-bottom: 0;
+    }
+    #fullpage.company #section3 .con .title{
+        margin-bottom: 80px;
+    }
+    #fullpage .section .con .event p{
+        margin-bottom: 60px;
+    }
+    .btn{
+        width: 100%;
+    }
+    #fullpage .section .con .block7_bg{
+        left: -230px;
+        top: -380px;
+    }
+    #fullpage .section .con .block8_bg{
+        right: -589.7px;
+        top: 40px;
+        transform: scale(0.4);
+    }
+    .company  #section2 .con .title.type2 p{
+        /* padding-bottom: 200px;
+        box-sizing: border-box; */
+    }
+    #fullpage .section .con .block5_bg{
+        left: -10px;
+        top: -220px;
+        opacity: 0.3;
+        transform: scale(0.4);
+    }
+    #fullpage .section .con .block6_bg{
+        left: -400px;
+        top: -380px;
+        opacity: 0.3;
+        transform: scale(0.4);
+    }
+
+    #fullpage .section .con .block3_bg {
+        right: -410px;
+        top: -760px;
+        opacity: 0.3;
+        transform: scale(0.4);
+    }    
+    #fullpage .section .con .block4_bg {
+        right: -790px;
+        top: -910px;
+        opacity: 0.3;
+        transform: scale(0.4);
+    }
+    #fullpage .section .con ul.company_list li{
+        overflow: hidden;
+    }
+    #fullpage .section .con ul.company_list li img{
+        border-radius: 20px;
+    }
+
+}
+@media screen and (max-width: 420px){
+
+    #fullpage.voting #section0 .con h1{
+        /* width: 320px; */
+    }
+    #fullpage.voting #section0 .con h1{
+        font-size: 43px;
+        line-height: 48px;
+    }
+
+    #fullpage.campaign #section0 .con h1{
+        /* width: 320px; */
+    }
+    #fullpage.campaign #section0 .con h1{
+        font-size: 43px;
+        line-height: 48px;
+    }
+
+    .voting .section .con .step > .left{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .voting .section .con .step > .left .txt h1{
+        font-size: 42px;
+    }
+    .voting .section .con .step > .left .txt h1{
+        font-size: 38px;
+    }
+    #fullpage .section .con .title h1{
+        font-size: 44px;
+    }
+    .voting .section .con .step > .right .img{
+        
+        height: 390px;
+    }
+}
